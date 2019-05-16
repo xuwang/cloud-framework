@@ -1,0 +1,9 @@
+# Def file for all the persistent disks used by this project
+#
+# The format of this file is per line for one persistent disk:
+#   <disk_name> <disk_size> [<disk_type>] [<disk_zone>] [<disk_snapshort_selfLink>]
+# shell envs can be used in these values.
+#
+#  See ${SCRIPTS_DIR}/disk-create-all.sh for how this file is used
+
+${DISK_NAME}   ${DISK_SIZE}GB   ${DISK_TYPE} ${GCP_ZONE} ${DISK_SNAPSHORT}

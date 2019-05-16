@@ -1,0 +1,20 @@
+pipeline:
+  code-analysis:
+    image: aosapps/drone-sonar-plugin:0.8
+    timeout: 20
+    level: INFO
+    showProfiling: true
+    secrets: [sonar_host, sonar_token]
+
+  slack:
+    image: plugins/slack
+    channel: example-cicd
+    username: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME}
+    template: |
+      *Build ${DRONE_BUILD_NUMBER}*: _*{{ build.status }}*_ on event _*${DRONE_BUILD_EVENT}*_
+      *Author*: ${CI_COMMIT_AUTHOR_NAME}
+      *<${DRONE_BUILD_LINK}|Build logs>* *<${DRONE_REPO_LINK}/commit/${DRONE_COMMIT_SHA}|Code changes>* *<${SONAR_HOST}/dashboard?id=${DRONE_REPO_OWNER}:${DRONE_REPO_NAME}|Code qulity>* 
+      *Message*: ${DRONE_COMMIT_MESSAGE}
+    secrets: [ slack_webhook, sonar_host]
+    when:
+      status: [ success, failure ]

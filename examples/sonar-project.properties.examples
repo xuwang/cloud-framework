@@ -1,0 +1,7 @@
+# See https://www.wrightfully.com/setting-up-sonar-analysis-for-c-projects/
+
+# sonar scanner config
+sonar.projectName=<project name>
+sonar.projectKey=<project key
+sonar.sources=.
+#sonar.exclusions=

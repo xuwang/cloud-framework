@@ -1,0 +1,15 @@
+# binary/package  type         url                                                                  version-search-string
+gcloud            manual       https://cloud.google.com/sdk/downloads                               none
+envsubst          manual       https://www.gnu.org/software/gettext                                 none
+kubectl           manual       https://cloud.google.com/container-engine/docs/quickstart            none
+kubectx           manual       https://github.com/ahmetb/kubectx#installation                       none
+helm              manual       https://docs.helm.sh/using_helm/#installing-helm                     none
+vault             manual       https://www.vaultproject.io/docs/install/index.html                  1.0.3
+drone             manual       http://docs.drone.io/cli-installation/                               0.8.5
+helm              manual       https://github.com/kubernetes/helm/blob/master/docs/install.md       2.8.2
+jq                manual       https://stedolan.github.io/jq/download/                              1.5
+gomplate          manual       https://github.com/hairyhenderson/gomplate/releases                  2.7.0
+terraform         manual       https://www.terraform.io/intro/getting-started/install.html          0.11.13
+docker            manual       https://www.docker.com/get-started                                   none
+skafford          manual       https://skaffold.dev/docs/getting-started/#installing-skaffold       none
+# always have an extra line at the end, should fix this

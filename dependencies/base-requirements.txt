@@ -1,0 +1,12 @@
+gcloud
+kubectl
+kubectx
+vault
+drone
+jq
+envsubst
+terraform
+gomplate
+helm
+docker
+skaffold

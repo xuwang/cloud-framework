@@ -1,0 +1,20 @@
+# Sub-projects git repos
+# must be in exact this format:
+#   <git repo domain>/<namespaces>/<repo name>
+# all repos will be cloned/pulled to sub-projects dir
+# with "make clone-repos"
+
+# cluster creation
+gitlab.example.com/svc/vault/gke-vault
+
+# kube deployment repos
+gitlab.example.com/svc/vault/kube-vault
+
+# docker image builds
+gitlab.example.com/svc/vault/docker-vault-init
+gitlab.example.com/svc/vault/docker-vault
+
+# data provisioning repos
+gitlab.example.com/svc/vault/provision-vault
+
+

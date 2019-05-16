@@ -1,0 +1,3 @@
+slack_webhook       vault://${SEC_PATH}/slack/cicd              -image plugins/slack
+sonar_token         @${HOME}/.sonar-token                       -image aosapps/drone-sonar-plugin
+sonar_host          ${SONARQUBE_SERVER} 
