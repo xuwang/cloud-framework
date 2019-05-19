@@ -35,11 +35,11 @@ destroy-cluster: ## destroy the GKE cluster and other related resources
 
 .PHONY: cluster-describe
 cluster-describe: ## show all the settings of the GKE cluster
-	@gcloud container clusters describe ${GKE_CLUSTER_NAME}
+	@gcloud container clusters describe ${GKE_CLUSTER_NAME} --region=${GCP_REGION}
 
 .PHONY: cluster-versions
-cluster-versions: ## show the available cluster master & node versions for the given zone
-	@gcloud container get-server-config --zone=${GKE_CLUSTER_ZONE}
+cluster-versions: ## show the available cluster master & node versions for the cluster region
+	@gcloud container get-server-config --region=${GCP_REGION}
 
 .PHONY: get-images
 get-images: config-kube ## List all images running in the cluster
